@@ -4,14 +4,15 @@ Follow videos for concepts minus some features.
 */
 const express = require("express");
 const courses = require('./routes/courses');
+const users = require('./routes/users');
 // const pages = require('./routes/pages');
-const Joi = require('joi');
 const authenticate = require('./authenticate');
 const app = express();
 
 app.use(express.json());
 // app.use(express.urlencoded({ extended:true })); // key=value&key=value
 app.use('/api/courses', courses);
+app.use('/api/users', users);
 // app.use('/', pages);
 
 app.use(authenticate);
