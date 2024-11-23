@@ -1,6 +1,7 @@
 /*
 Re-factor code to follow process on codewithmosh Vidly project.
 Follow videos for concepts minus some features.
+need to research how to use routes with ES6
 */
 const express = require("express");
 const courses = require('./routes/courses');
