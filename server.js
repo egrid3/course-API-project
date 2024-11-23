@@ -7,6 +7,7 @@ const courses = require('./routes/courses');
 const users = require('./routes/users');
 // const pages = require('./routes/pages');
 const authenticate = require('./authenticate');
+const errorHandler = require('./middleware/error');
 const app = express();
 
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use('/api/users', users);
 // app.use('/', pages);
 
 app.use(authenticate);
+app.use(errorHandler);
 
 app.get("/",(req,res) => {
 res.send(`<h2 style="color:slateblue; text-align:center">Can you see me? Then it works!</h2>`)

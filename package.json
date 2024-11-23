@@ -1,0 +1,25 @@
+{
+  "name": "course-api-project",
+  "version": "1.0.0",
+  "description": "Project to create an API for an online learning platform",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "node --env-file=.env --watch server",
+    "dev2": "node --env-file=.env --watch index"
+  },
+  "keywords": [
+    "courses",
+    "learn",
+    "online_learning",
+    "education"
+  ],
+  "author": "Elvin & Shariff",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "joi": "^17.13.3"
+  }
+}
