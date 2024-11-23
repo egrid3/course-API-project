@@ -1,6 +1,6 @@
 // To serve course endpoints / ? if will use pug or other template engines / remove Joi functions? - how to refactor
-
-const express = require('express');
+import express from 'express';
+// const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
 
@@ -63,4 +63,4 @@ function validateCourse(course) {
   return schema.validate(course);
 }
 
-module.exports = router;
+export default router;

@@ -1,8 +1,7 @@
 // Authentication for users (general and admin)
-
-function auth(req, res, next) {
+const auth = (req, res, next) => {
   console.log('Authenticating...');
   next();
 }
 
-module.exports = auth;
+export default auth;

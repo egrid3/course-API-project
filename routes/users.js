@@ -1,25 +1,24 @@
 // To serve user endpoints / ? if will use pug or other template engines / remove Joi functions? - how to refactor
 
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 const Joi = require('joi');
 
-const users =[ /*
+const users =[
   { id: 1, name: 'user1' },
   { id: 2, name: 'user2' },
   { id: 3, name: 'user3' },
   { id: 4, name: 'user4' }
-*/];
+];
 
-router.get('/', (req, res) => {
-  /*(404 for wrong endpoint, or error for no users) const users = users.find(c => c.id === parseInt(req.params.id));
-  if (!users) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); //404 error message*/
+router.get('/', (req, res, next) => {
+  /* if (error.status = 404) return error.send('<h2 style="text-align: center; color: #EF9427;">Page not found</h2>'); // 404 error message */
   res.send(users);
 });
 
 router.get('/:id', (req, res) => {
   const user = users.find(c => c.id === parseInt(req.params.id));
-  if (!user) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); //404 error message
+  if (!user) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); // 404 error message
   res.send(user);
 });
 
@@ -37,7 +36,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // Look up user; if not existing, return 404
   const user = users.find(c => c.id === parseInt(req.params.id));
-  if (!user) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); //404 error message
+  if (!user) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); // 404 error message
   // Validate; if not valid, return 400 - Bad Request
   const { error } = validateuser(req.body);
   if (error) return res.status(400).send(error.details[0].message);
@@ -50,7 +49,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   // Look up the user; not existing, return 404
   const user = users.find(c => c.id === parseInt(req.params.id));
-  if (!user) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); //404 error message
+  if (!user) return res.status(404).send('<h2 style="text-align: center; color: #EF9427;">The given user was not found. Check your spelling and try again.</h2>'); // 404 error message
   // Delete
   const index = users.indexOf(user);
   users.splice(index, 1);
@@ -65,4 +64,4 @@ function validateuser(user) {
   return schema.validate(user);
 }
 
-module.exports = router;
+export default router;
