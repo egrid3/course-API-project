@@ -17,6 +17,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(auth);
 
 app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
@@ -43,8 +44,6 @@ app.use((req, res, next) => {
   next(error);
 });
 app.use(errorHandler);
-
-app.use(auth);
 
 //Declare PORT variable
 const port = process.env.PORT || 8050
