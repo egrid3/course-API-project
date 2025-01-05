@@ -7,8 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
-    "dev": "node --env-file=.env --watch server",
-    "dev2": "node --env-file=.env --watch index"
+    "dev": "node --env-file=./config/.env --watch server"
   },
   "keywords": [
     "courses",
@@ -21,6 +20,7 @@
   "dependencies": {
     "express": "^4.21.1",
     "express-handlebars": "^8.0.1",
-    "joi": "^17.13.3"
+    "joi": "^17.13.3",
+    "mongoose": "^8.9.2"
   }
 }

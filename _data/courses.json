@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Course1",
+    "description": "Minim nulla incididunt occaecat sunt id deserunt nisi sit id sint exercitation mollit.",
+    "videoType": "VOD",
+    "imgUrl": "https://websitedemos.net/online-courses-02/wp-content/uploads/sites/542/2020/04/html-400x223.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Course2",
+    "description": "Consectetur quis duis elit occaecat occaecat ea ex pariatur. Excepteur fugiat occaecat sunt id deserunt nisi sit id sint exercitation mollit.",
+    "videoType": "VOD",
+    "imgUrl": "https://websitedemos.net/online-courses-02/wp-content/uploads/sites/542/2020/04/wordpress-400x223.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Course3",
+    "description": "Excepteur fugiat laboris duis sint fugiat in id ullamco ipsum consequat exercitation excepteur est.",
+    "videoType": "Live",
+    "imgUrl": "https://websitedemos.net/online-courses-02/wp-content/uploads/sites/542/2020/04/html-400x223.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Course4",
+    "description": "Ipsum non nostrud duis officia laborum exercitation excepteur do. Incididunt aliqua quis dolor id culpa. Aute commodo ad occaecat magna eu elit ut. Enim adipisicing eiusmod ad anim. Sit excepteur magna laboris esse consectetur eiusmod adipisicing. Dolor pariatur sint elit excepteur anim irure qui.",
+    "videoType": "VOD",
+    "imgUrl": "https://websitedemos.net/online-courses-02/wp-content/uploads/sites/542/2020/04/wordpress-400x223.jpg"
+  }
+]
